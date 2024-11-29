@@ -149,9 +149,7 @@ func main() {
     
     // Parallel iteration (for concurrent processing)
     for k, v := range cache.AllParallel() {
-        go func(key string, value int) {
-            fmt.Printf("Processing: %s=%d\n", key, value)
-        }(k, v.V)
+        fmt.Printf("Processing: %s=%d\n", k, v.V)
     }
 }
 ```
